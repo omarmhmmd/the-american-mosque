@@ -217,9 +217,10 @@ const renderBlock = (block) => {
   }
 };
 
-export default function Post({ page, blocks }) {
+export default function Post({ id, page, blocks }) {
+  console.log(id)
   if (!page || !blocks) {
-    return <div />;
+    return <div>hey</div>;
   }
   return (
     <div>
@@ -250,8 +251,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context) => {
-  const { id } = context.params;
+export const getStaticProps = async ({id}) => {
   const page = await getPage(id);
   const blocks = await getBlocks(id);
   return {
