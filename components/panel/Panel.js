@@ -7,7 +7,7 @@ export default function Panel({ page, blocks }) {
   return (
     <>
       <section className={styles.container}>
-        <Div100vh>
+        <div className={styles.sticky}>
           <div className={styles.sticky}>
             <header className={styles.header}>
               <h1 className={styles.title}>
@@ -39,7 +39,7 @@ export default function Panel({ page, blocks }) {
               </div>
             </div>
           </div>
-        </Div100vh>
+        </div>
       </section>
     </>
   );
