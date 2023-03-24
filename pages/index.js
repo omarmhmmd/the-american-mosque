@@ -15,7 +15,7 @@ export default function Index({page, blocks}) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   // When you want to add citations as database add this
   // const database = await getDatabase('');
   const page = await getPage(process.env.NEXT_PUBLIC_NOTION_PAGE_ID);
@@ -25,6 +25,6 @@ export const getStaticProps = async () => {
       page,
       blocks,
     },
-    revalidate: 1,
+    // revalidate: 1,
   };
 };
