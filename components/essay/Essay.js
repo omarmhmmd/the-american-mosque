@@ -18,7 +18,6 @@ import Image from 'next/image'
 const renderBlock = (block) => {
   const { type, id } = block;
   const value = block[type];
-
   switch (type) {
     case "paragraph":
       return (
@@ -27,14 +26,14 @@ const renderBlock = (block) => {
         </p>
       );
     case "callout":
-      const info = value.rich_text ? value.rich_text[0]?.plain_text : "";
+      const info = value.rich_text ? value.rich_text : "";
       const infoLink = value.rich_text ? value.rich_text[1]?.plain_text : "";
       return (
         <p className={styles.callOut}>
-          {info}{" "}
-          <a target="_blank" href={value.rich_text[1]?.href}>
+          <Text text={info} />
+          {/* <a target="_blank" href={value.rich_text[1]?.href}>
             {infoLink}
-          </a>{" "}
+          </a>{" "} */}
         </p>
       );
     case "heading_1":
@@ -78,7 +77,15 @@ const renderBlock = (block) => {
       const link = value.caption ? value.caption[1]?.plain_text : "";
       return (
         <figure>
-          <img className={styles.img} src={src} alt={caption} />
+          <Image 
+            width={600}
+            height={800}
+            sizes="100vw"
+            
+            style={{
+              width: '100%',
+              height: 'auto',
+            }} className={styles.img} src={src} alt={caption} />
           {caption && (
             <figcaption>
               {caption}{" "}
@@ -135,9 +142,8 @@ const renderBlock = (block) => {
       );
     }
     default:
-      return `❌ Unsupported block (${
-        type === "unsupported" ? "unsupported by Notion API" : type
-      })`;
+      return `❌ Unsupported block (${type === "unsupported" ? "unsupported by Notion API" : type
+        })`;
   }
 };
 
@@ -147,9 +153,6 @@ export default function Post({ page, blocks }) {
   }
   return (
     <div className={styles.container}>
-      {/* <h1 className={styles.name}>
-          <Text text={page.properties.Name.title} />
-        </h1> */}
       {blocks.map((block) => (
         <Fragment key={block.id}>{renderBlock(block)}</Fragment>
       ))}

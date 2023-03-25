@@ -1,9 +1,8 @@
 import styles from "./panel.module.css";
 import Text from "../../structure/text/Text.js";
-import Div100vh from 'react-div-100vh'
+import Image from 'next/image'
 
 export default function Panel({ page, blocks }) {
-  console.log(page);
   return (
     <>
       <section className={styles.container}>
@@ -17,10 +16,15 @@ export default function Panel({ page, blocks }) {
                 <Text text={page.properties.Subtitle.rich_text} />
               </h1>
             </header>
-
             <div className={styles.imgGrid}>
               {page.properties["Files & media"].files.map((img) => {
-                return <img src={img.file.url} />;
+                return (
+                  <Image src={img.external.url}
+                    width={600}
+                    height={800}
+                  />
+                )
+                // return <img src={img.file.url} />;
               })}
             </div>
             <div className={styles.info}>

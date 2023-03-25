@@ -63,10 +63,12 @@
   align-items: center;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
+  position: relative;
 }
 
 .imgGrid img {
   width: 100%;
+  height: auto;
   mix-blend-mode:luminosity;
 }
 /*** Image Grid ***/
@@ -110,8 +112,8 @@
   }
 
   .imgGrid {
-    grid-column-gap:8px;
-    grid-row-gap: 8px;
+    grid-column-gap:4px;
+    grid-row-gap: 4px;
   }
 
   .info {
