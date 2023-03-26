@@ -3,9 +3,12 @@
   --caption-color: #777;
   --header-color: #444;
 
-  --panel-color: #3F330E;
+  --panel-color: black;
+  --panel-2: black;
+  --panel-bg: #0EC604;
+  /* --panel-color: #3F330E;
   --panel-2: #5c4a14;
-  --panel-bg: #E3CA7E;
+  --panel-bg: #E3CA7E; */
 }
 
 body {

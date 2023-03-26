@@ -2,16 +2,33 @@ import { Fragment } from "react";
 import Head from "next/head";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import Layout from "../layout/Layout.js"
-export default function Index({page, blocks}) {
-  
+export default function Index({ page, blocks }) {
+
   return (
     <div>
       <Head>
         <title>{page.properties.Title.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#E3CA7E"/>
+        <meta name="theme-color" content="#0EC604" />
+
+        <meta name="title" content={page.properties.Title.title[0].plain_text} />
+        <meta name="description" content={page.properties.Info.rich_text[0].plain_text} />
+        <meta property="og:title" content={page.properties.Title.title[0].plain_text} />
+        <meta
+          property="og:description"
+          content={page.properties.Info.rich_text[0].plain_text}
+        />
+        <meta
+          property="og:image"
+          content="./public/meta.png"
+        />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content={page.properties.Title.title[0].plain_text} />
+        <meta property="twitter:description" content={page.properties.Info.rich_text[0].plain_text} />
+        <meta property="twitter:image" content="./public/meta.png"></meta>
       </Head>
-     <Layout page ={page} blocks={blocks}/>
+      <Layout page={page} blocks={blocks} />
     </div>
   );
 }

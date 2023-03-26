@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import localFont from '@next/font/local'
+import { motion } from "framer-motion"
 
 const graphik = localFont({
   src: [
@@ -34,9 +35,13 @@ const graphik = localFont({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main className={graphik.className}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className={graphik.className}>
       <Component {...pageProps} />
-    </main>
+    </motion.div>
   )
 }
 
