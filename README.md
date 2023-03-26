@@ -1,6 +1,6 @@
 ## The American Mosque
 
-![The American Mosque](/public/demo.png)
+![The American Mosque](/public/meta.png)
 
 This essay explores the identity of the mosque in America, its struggle to develop cultural and regional roots, and the societal and political issues that stand in its way.
 
