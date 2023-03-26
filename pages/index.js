@@ -9,6 +9,7 @@ export default function Index({page, blocks}) {
       <Head>
         <title>{page.properties.Title.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#E3CA7E"/>
       </Head>
      <Layout page ={page} blocks={blocks}/>
     </div>
