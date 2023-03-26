@@ -77,11 +77,11 @@ const renderBlock = (block) => {
       const link = value.caption ? value.caption[1]?.plain_text : "";
       return (
         <figure>
-          <Image 
+          <Image
             width={600}
             height={800}
             sizes="100vw"
-            
+
             style={{
               width: '100%',
               height: 'auto',
@@ -130,6 +130,11 @@ const renderBlock = (block) => {
             return renderBlock(block)
           })}
         </div>
+        // <div className={styles.row}>
+        //   {block.children.map((block) => {
+        //     return renderBlock(block)
+        //   })}
+        // </div>
       );
     }
     case "column": {
