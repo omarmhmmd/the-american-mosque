@@ -20,13 +20,13 @@ export default function Index({ page, blocks }) {
         />
         <meta
           property="og:image"
-          content="./public/meta.png"
+          content="/meta.png"
         />
 
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:title" content={page.properties.Title.title[0].plain_text} />
         <meta property="twitter:description" content={page.properties.Info.rich_text[0].plain_text} />
-        <meta property="twitter:image" content="./public/meta.png"></meta>
+        <meta property="twitter:image" content="/meta.png"></meta>
       </Head>
       <Layout page={page} blocks={blocks} />
     </div>
