@@ -1,11 +1,13 @@
 .container {
-  background-color: #e3ca7e;
+  background-color: var(--panel-bg);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding: 16px;
   justify-content: space-between;
   color: var(--panel-color);
+  overflow: hidden;
+
 }
 
 .sticky {
@@ -20,21 +22,39 @@
 
 /*** Header ***/
 .header {
+  overflow: hidden;
+
   
 }
 
 .title {
-  font-size: 28px;
+  font-size: 72px;
   font-weight: bold;
+  line-height: 1;
+  padding-bottom: 16px;
+  overflow: hidden;
 }
 
 .sub {
   font-size: 28px;
+  padding-top: 0px;
+  line-height: 1.2;
+  font-weight: bold;
+
   /* padding-bottom: 36px; */
 }
 
+.author {
+  padding-top: 16px;
+  font-size: 28px;
+  color: var(--panel-2);
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  /* font-weight: 600; */
+}
+
 .container a {
-  color: var(--panel-color);
+  color: var(--panel-2);
 }
 
 .container a:hover {
@@ -50,7 +70,6 @@
 
 /*** Image Grid ***/
 .gridContainer {
-  background-color: red;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -66,7 +85,17 @@
   position: relative;
 }
 
+.imgSingle{
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
 .imgGrid img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode:luminosity;
+}
+.imgSingle img {
   width: 100%;
   height: auto;
   mix-blend-mode:luminosity;
@@ -87,6 +116,7 @@
 .text {
   font-size: 12px;
   line-height: 1.45;
+  color: var(--panel-2);
 }
 
 .text a {
@@ -101,10 +131,14 @@
 /*** End Info ***/
 
 /*** Mobile ***/
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .container {
     padding: 24px;
     padding-bottom: 0px;
+  }
+
+  .header {
+    padding-top: 0px;
   }
 
   .sticky {

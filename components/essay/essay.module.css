@@ -77,7 +77,7 @@
     max-width: 50em;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .container {
     padding: 24px;
     align-items: flex-start;

@@ -1,8 +1,11 @@
 :root {
   --text-color: #444;
   --caption-color: #777;
-  --header-color: #555;
-  --panel-color: #222;
+  --header-color: #222;
+
+  --panel-color: #3F330E;
+  --panel-2: #685418;
+  --panel-bg: #E3CA7E;
 }
 
 body {
