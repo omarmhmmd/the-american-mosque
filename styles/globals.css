@@ -1,17 +1,16 @@
 :root {
   --text-color: #444;
   --caption-color: #777;
-  --header-color: #222;
+  --header-color: #444;
 
   --panel-color: #3F330E;
-  --panel-2: #685418;
+  --panel-2: #5c4a14;
   --panel-bg: #E3CA7E;
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: arial;
 }
 
 h1,h2,h3 {
