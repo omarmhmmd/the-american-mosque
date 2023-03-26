@@ -9,6 +9,7 @@
 
 .text {
   font-size: 14px;
+  min-width: 40em;
   max-width: 40em;
   line-height: 1.6;
   display: inline-block;
