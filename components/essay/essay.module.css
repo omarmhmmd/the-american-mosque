@@ -73,6 +73,7 @@
 @media (min-width: 1441px) {
   .text {
     max-width: 50em;
+    min-width: 50em;
   }
   .list {
     max-width: 50em;
